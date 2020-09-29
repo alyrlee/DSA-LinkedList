@@ -1,5 +1,4 @@
-Assignment
-Create a GitHub repo called "DSA-LinkedList". Save all this work in the repo and submit the repo via the submission box at the end of this checkpoint.
+## Assignment
 
 In these drills, you'll practice creating a linked list, implementing its core, and some supplemental operations. You will also use your linked list to solve interview questions. Don't forget to assess the big O for each of these exercises. Start each problem by stating 1 or more sample inputs and outputs.
 
@@ -27,7 +26,7 @@ findPrevious: finds the node before the item you are looking for
 findLast: returns the last node in the linked list
 Mystery program
 Analyze the following function (without running it in an IDE) to determine what problem it is trying to solve. What is the time complexity of this algorithm?
-
+```
 function WhatDoesThisProgramDo(lst) {
     let current = lst.head;
     while (current !== null) {
@@ -43,6 +42,7 @@ function WhatDoesThisProgramDo(lst) {
         current = current.next;
     }
 }
+```
 Reverse a list
 Write an algorithm to reverse a linked list. The time complexity of your algorithm should be linear (O(n)). For this exercise, notice we are not asking you just to print the linked list in reverse or use another linked list to store the value in reverse order. Your program should reverse the direction of a given singly linked list. In other words, all pointers should point backward. BONUS: Solve this problem using both recursive and iterative algorithms.
 
