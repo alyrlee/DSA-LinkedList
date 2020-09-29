@@ -2,6 +2,107 @@
 Walk through the linked list code in the curriculum and understand it well. 
 Then write a linked list class and its core functions (insertFirst, insertLast, remove, find) from scratch.
 ------------------------------------------------ */
+class _Node {
+    constructor(values, next) {
+        this.value = value
+        this.next = next
+    }
+}
+
+
+//insertion
+class LinkedList {
+    constructor() {
+        this.head = null;
+    }
+insertFirst(item) {
+        this.head = new _Node(item, this.head);
+    }
+ 
+ insertBefore(newItem, nextItem) {
+     let tempNode = this.head
+     while (tempNode.next !== null) {
+            if (tempNode.next.value == nextItem) {
+         let n = new _Node(newItem)
+         n.next = tempNode.next
+                tempNode.next = n
+         return;
+     } tempNode = tempNode.next
+ }};
+    
+ insertAfter(prevItem, newItem) {
+    let tempNode = this.head;
+    while (tempNode.next !== null) {
+      if (tempNode.value == prevItem) {
+        let n = new _Node(newItem)
+        n.next = tempNode.next
+        tempNode.next = n
+        return;
+      }
+      tempNode = tempNode.next;
+    }
+  };
+    
+ insertAt(newItem, position) {
+    let tempNode = this.head
+    let n = new _Node(newItem)
+
+    if (tempNode == null && position !== 0) {
+      return;
+    } else if (tempNode == null && position == 0) {
+      insertFirst(newItem);
+    } else if (tempNode !== null && position == 0) {
+      n.next = this.head;
+      this.head = n
+      return;
+    }
+
+    let current = this.head
+    let previous = null;
+    let i = 0;
+    while (i < position) {
+      previous = current
+      current = current.next
+      if (current == null) {
+        break;
+      }
+      i++;
+    }
+    n.next = current;
+    previous.next = n;
+  };
+
+  insertLast(item) {
+    if (this.head === null) {
+      this.insertFirst(item);
+    }
+    else {
+      let tempNode = this.head;
+        while (tempNode.next !=null) {
+            tempNode = tempNode.next;
+        }
+        tempNode.next = new _Node(item,, null);
+    }};
+    
+    find(item) { 
+        let currNode = this.head;
+    
+        if (!this.head) {
+            return null;
+        }
+        while (currNode.value !== item) {
+    
+            if (currNode.next === null) {
+                return null;
+            }
+            else {       
+                currNode = currNode.next;
+            }
+        }
+        return currNode;
+    }
+    ...
+       
 
 /* ------------Creating a singly linked list  ----------------
 Write a function main. Within the function, using the linked list class above, create a linked list with
